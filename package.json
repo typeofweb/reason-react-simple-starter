@@ -1,0 +1,41 @@
+{
+  "name": "reason-js-1",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "npm run clean && npm-run-all build:*",
+    "build:bsb": "bsb -make-world",
+    "build:webpack": "webpack -p",
+    "clean": "npm-run-all --parallel clean:*",
+    "clean:bsb": "bsb -clean-world",
+    "clean:project": "rm -rf bundledOutputs .merlin",
+    "start": "npm-run-all --parallel start:*",
+    "start:bsb": "npm run build:bsb -- -w",
+    "start:webpack": "webpack-dev-server",
+    "test": "npm-run-all clean build:bsb jest",
+    "test:watch": "npm-run-all clean build:bsb && npm run jest -- --watchAll",
+    "jest": "jest"
+  },
+  "keywords": [
+    "BuckleScript"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "bs-jest": "0.1.0",
+    "bs-platform": "1.8.2",
+    "bs-react-test-renderer": "1.0.1",
+    "jest": "20.0.4",
+    "npm-run-all": "4.0.2",
+    "reason-cli": "github:reasonml/reason-cli",
+    "shared-git-hooks": "1.2.1",
+    "webpack": "3.4.1",
+    "webpack-dev-server": "2.6.1"
+  },
+  "dependencies": {
+    "bs-fetch": "0.1.1",
+    "bs-json": "0.2.1",
+    "bs-webapi": "0.5.0",
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "reason-react": "0.2.3"
+  }
+}
