@@ -1,6 +1,4 @@
-# Basic Reason Template
-
-Hello! This project allows you to quickly get started with Reason and BuckleScript. If you wanted a more sophisticated version, try the `react` template (`bsb -theme react -init .`).
+# Reason React Simple Starter
 
 # Build
 ```
@@ -10,7 +8,7 @@ npm run build
 # Build + Watch
 
 ```
-npm run watch
+npm start
 ```
 
 
@@ -18,4 +16,4 @@ npm run watch
 If you use `vscode`, Press `Windows + Shift + B` it will build automatically
 
 # Demo
-[https://mmiszy.github.io/reason-notes-app/](https://mmiszy.github.io/reason-notes-app/)
+[https://mmiszy.github.io/reason-react-simple-starter/](https://mmiszy.github.io/reason-react-simple-starter/)
