@@ -28,6 +28,7 @@
     "reason-cli": "github:reasonml/reason-cli",
     "shared-git-hooks": "1.2.1",
     "webpack": "3.4.1",
+    "webpack-common-shake": "1.5.3",
     "webpack-dev-server": "2.6.1"
   },
   "dependencies": {

@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const ShakePlugin = require('webpack-common-shake').Plugin;
 
 module.exports = {
   entry: {
@@ -28,6 +29,7 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
+    new ShakePlugin(),
   	new webpack.HotModuleReplacementPlugin()
   ]
 };
