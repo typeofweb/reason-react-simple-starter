@@ -1,1 +1,1 @@
-ReactDOMRe.renderToElementWithId <div> (ReasonReact.stringToElement "Hello, world!") </div> "root";
+ReactDOMRe.renderToElementWithId <App name="Anne" /> "root";
