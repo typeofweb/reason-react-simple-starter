@@ -33,7 +33,7 @@ module.exports = {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
       },
     }),
-    new ShakePlugin(),
+    // new ShakePlugin(), // https://github.com/indutny/webpack-common-shake/issues/16
     new webpack.HotModuleReplacementPlugin()
   ]
 };
