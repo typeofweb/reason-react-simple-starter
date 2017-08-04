@@ -1,4 +1,4 @@
 #!/bin/sh
 
-NODE_ENV=production npm run build
+npm run prod
 git add lib bundledOutputs

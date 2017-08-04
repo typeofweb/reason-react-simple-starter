@@ -33,7 +33,7 @@ Run `npm start`. This single command does 3 things:
 Effectively, whenever you make any changes in Reason sources, they get automatically compiled to JS. Then `webpack` picks the new files and bundles into a single file `main.js` inside `/bundledOutputs` dir. This file is ready to be used in the browser (see `/index.html`).
 
 ## Production build
-Run `npm run build`. For faster and smaller bundle try running `NODE_ENV=production npm run build`
+Run `npm run build`. For faster and smaller bundle try running `npm run prod`.
 
 # Demo
 [https://mmiszy.github.io/reason-react-simple-starter/](https://mmiszy.github.io/reason-react-simple-starter/)
