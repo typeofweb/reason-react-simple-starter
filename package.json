@@ -1,6 +1,6 @@
 {
-  "name": "reason-js-1",
-  "version": "0.1.0",
+  "name": "reason-react-simple-starter",
+  "version": "1.0.0",
   "scripts": {
     "build": "npm run clean && npm-run-all build:*",
     "build:bsb": "bsb -make-world",

@@ -7,7 +7,7 @@ module.exports = {
     'react-hot-loader/patch',
     'webpack-dev-server/client?http://localhost:8081',
     'webpack/hot/only-dev-server',
-    './lib/js/src/main.js',
+    './lib/es6/src/main.js',
   ],
   output: {
     path: path.join(__dirname, "bundledOutputs"),
