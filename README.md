@@ -1,6 +1,6 @@
 # Reason React Simple Starter
 
-Welcome Reason React Simple Starter! It's a project created to help you start a project with React using ReasonML (duh). It uses `webpack`.
+Welcome Reason React Simple Starter! It's a project created to help you start your journey with React using ReasonML (duh). It uses `webpack`.
 
 ## FAQ
 ### What's ReasonML?
