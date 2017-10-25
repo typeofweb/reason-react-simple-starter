@@ -10,10 +10,6 @@ module.exports = Merge(CommonConfig, {
     ],
     devtool: false,
     plugins: [
-        new webpack.LoaderOptionsPlugin({
-            minimize: true,
-            debug: false
-        }),
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production')

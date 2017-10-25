@@ -1,6 +1,6 @@
 {
   "name": "reason-react-simple-starter",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "scripts": {
     "build": "npm run clean && npm-run-all build:*",
     "build:bsb": "bsb -make-world",
@@ -21,25 +21,24 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "bs-jest": "0.1.0",
-    "bs-platform": "1.8.2",
+    "bs-jest": "0.2.0",
+    "bs-platform": "1.10.3",
     "bs-react-test-renderer": "1.0.1",
-    "jest": "20.0.4",
-    "npm-run-all": "4.0.2",
-    "react-hot-loader": "3.0.0-beta.7",
-    "reason-cli": "github:reasonml/reason-cli",
+    "jest": "21.2.1",
+    "npm-run-all": "4.1.1",
+    "react-hot-loader": "3.1.1",
     "shared-git-hooks": "1.2.1",
-    "webpack": "3.4.1",
+    "webpack": "3.8.1",
     "webpack-common-shake": "1.5.3",
-    "webpack-dev-server": "2.6.1",
+    "webpack-dev-server": "2.9.3",
     "webpack-merge": "4.1.0"
   },
   "dependencies": {
-    "bs-fetch": "0.1.1",
-    "bs-json": "0.2.1",
-    "bs-webapi": "0.5.0",
-    "react": "15.6.1",
-    "react-dom": "15.6.1",
-    "reason-react": "0.2.3"
+    "bs-fetch": "0.2.0",
+    "bs-json": "0.2.3",
+    "bs-webapi": "0.7.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "reason-react": "0.2.4"
   }
 }
