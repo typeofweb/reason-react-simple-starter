@@ -24,16 +24,19 @@ You'll need `node` and `npm`. This project was tested on `node 8` and `npm 5` bu
 Download the repository and run `npm install`. This will install all dependencies and set everything up. You're ready to go!
 
 ## Development
-Run `npm start`. This single command does 3 things:
+Run `npm start`. This command starts `webpack-dev-server` which in turn:
 
-* Compiles all Reason files initially into `/lib` directory
-* Starts watcher on Reason files in `/src` directory
+* Compiles all Reason files thanks to `bs-loader`
 * Starts `webpack` in a watch mode
+* Runs a server at http://localhost:8081/
 
-Effectively, whenever you make any changes in Reason sources, they get automatically compiled to JS. Then `webpack` picks the new files and bundles into a single file `main.js` inside `/bundledOutputs` dir. This file is ready to be used in the browser (see `/index.html`).
+Effectively, whenever you make any changes in Reason sources, they get automatically compiled to JS — `webpack` picks the new files and bundles into a single file `main.js` inside `/bundledOutputs` dir. This file is ready to be used in the browser (see `/index.html`).
+
+## Dev build
+Run `npm run build`.
 
 ## Production build
-Run `npm run build`. For faster and smaller bundle try running `npm run prod`.
+For faster and smaller bundle try running `npm run prod`.
 
 # Demo
 [https://mmiszy.github.io/reason-react-simple-starter/](https://mmiszy.github.io/reason-react-simple-starter/)
