@@ -40,7 +40,7 @@ let make _children => {
     let timesMessage = time == 1 ? "second" : "seconds";
     let timeMessage = {j|You've spent $time $timesMessage on this page|j};
     let counterMessage = {j|You've clicked the button: $count|j};
-    let d = Moment.(momentWithDate (Js.Date.make ()) |> format "dddd");
+    let d = Moment.(momentWithDate (Js.Date.make ()) |> format "HH:mm:ss");
     <div>
       <button onClick=(reduce (fun _ => Click))> (ReasonReact.stringToElement "Click") </button>
       <p> (ReasonReact.stringToElement timeMessage) </p>
