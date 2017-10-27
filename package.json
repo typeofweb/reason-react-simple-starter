@@ -3,17 +3,15 @@
   "version": "2.1.0",
   "scripts": {
     "build": "npm run clean && npm-run-all build:*",
-    "build:bsb": "bsb -make-world",
     "build:webpack": "webpack -p",
-    "prod": "npm run clean && npm run build:bsb && NODE_ENV=production npm run build:webpack -- --env=prod",
+    "prod": "npm run clean && NODE_ENV=production npm run build:webpack -- --env=prod",
     "clean": "npm-run-all --parallel clean:*",
     "clean:bsb": "bsb -clean-world",
     "clean:project": "rm -rf bundledOutputs .merlin",
-    "start": "npm run build:bsb && npm-run-all --parallel start:*",
-    "start:bsb": "npm run build:bsb -- -w",
+    "start": "npm-run-all --parallel start:*",
     "start:webpack": "webpack-dev-server",
-    "test": "npm-run-all clean build:bsb jest",
-    "test:watch": "npm-run-all clean build:bsb && npm run jest -- --watchAll",
+    "test": "npm run jest",
+    "test:watch": "npm run clean && npm run jest -- --watchAll",
     "jest": "jest"
   },
   "keywords": [
@@ -22,6 +20,7 @@
   "license": "MIT",
   "devDependencies": {
     "bs-jest": "0.2.0",
+    "bs-loader": "1.8.2",
     "bs-platform": "1.10.3",
     "bs-react-test-renderer": "1.0.1",
     "jest": "21.2.1",

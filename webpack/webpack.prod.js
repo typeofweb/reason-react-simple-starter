@@ -6,7 +6,7 @@ const CommonConfig = require('./webpack.common.js');
 
 module.exports = Merge(CommonConfig, {
     entry: [
-        './lib/es6/src/main.js',
+        './src/main.re'
     ],
     devtool: false,
     plugins: [
