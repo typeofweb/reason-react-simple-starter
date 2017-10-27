@@ -8,6 +8,13 @@ type state = {
   count: int
 };
 
+let res =
+  Js.Promise.(
+    Fetch.fetch "https://www.google.com"
+    |> then_ Fetch.Response.text
+    |> then_ (fun text => Js.log text |> resolve)
+  );
+
 external alert : string => unit = "alert" [@@bs.val];
 
 let component = ReasonReact.reducerComponent "MyCounter";
@@ -33,10 +40,12 @@ let make _children => {
     let timesMessage = time == 1 ? "second" : "seconds";
     let timeMessage = {j|You've spent $time $timesMessage on this page|j};
     let counterMessage = {j|You've clicked the button: $count|j};
+    let d = Moment.momentWithDate (Js.Date.make ());
     <div>
       <button onClick=(reduce (fun _ => Click))> (ReasonReact.stringToElement "Click") </button>
       <p> (ReasonReact.stringToElement timeMessage) </p>
       <p> (ReasonReact.stringToElement counterMessage) </p>
+      <p> (ReasonReact.stringToElement (d |> Moment.format "dddd")) </p>
     </div>
   }
 };
