@@ -1,5 +1,5 @@
 type t;
 
-external momentWithDate : Js.Date.t => t = "moment" [@@bs.module];
+[@bs.module] external momentWithDate : Js.Date.t => t = "moment";
 
-external format : string => string = "" [@@bs.send.pipe : t];
+[@bs.send.pipe: t] external format : string => string = "";

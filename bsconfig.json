@@ -2,11 +2,12 @@
 // BuckleScript comes with its own parser for bsconfig.json, which is normal JSON, with the extra support of comments and trailing commas.
 {
   "name": "reason-react-simple-starter",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "reason": {
     "react-jsx": 2
   },
   "refmt-specs": 3,
+  "refmt": 3,
   "bs-dependencies": [
     "reason-react",
     "bs-webapi",
