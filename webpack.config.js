@@ -1,3 +1,5 @@
 module.exports = function(env = 'dev') {
-  return require(`./webpack/webpack.${env}.js`)
+  const config = require(`./webpack/webpack.${env}.js`);
+  config.mode = (env === 'production' ? 'production' : 'development');
+  return config;
 };
