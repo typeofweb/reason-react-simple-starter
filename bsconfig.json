@@ -2,7 +2,7 @@
 // BuckleScript comes with its own parser for bsconfig.json, which is normal JSON, with the extra support of comments and trailing commas.
 {
   "name": "reason-react-simple-starter",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "reason": {
     "react-jsx": 2
   },
@@ -12,20 +12,17 @@
     "reason-react",
     "bs-webapi",
     "bs-fetch",
-    "bs-json"
+    "@glennsl/bs-json"
     // add your dependencies here. You'd usually install them normally through `npm install my-dependency`. If my-dependency has a bsconfig.json too, then everything will work seamlessly.
   ],
-  "bs-dev-dependencies": [
-    "bs-jest",
-    "bs-react-test-renderer"
-  ],
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-react-test-renderer"],
   "sources": [
     "src",
     {
       "dir": "__tests__",
       "type": "dev"
     }
-  ],
+  ]
   // "package-specs": [
   //   "es6",
   //   "commonjs"
