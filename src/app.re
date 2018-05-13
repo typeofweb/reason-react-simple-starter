@@ -33,23 +33,21 @@ let make = _children => {
         (({state: {count}}) => alert({j|Updating counter to $count|j})),
       );
     },
-  didMount: self => {
+  didMount: self =>
     self.state.timerId :=
-      Some(Js.Global.setInterval(self.reduce((_) => Tick), 1000));
-    ReasonReact.NoUpdate;
-  },
-  render: ({reduce, state: {time, count}}) => {
+      Some(Js.Global.setInterval(() => self.send(Tick), 1000)),
+  render: ({send, state: {time, count}}) => {
     let timesMessage = time == 1 ? "second" : "seconds";
     let timeMessage = {j|You've spent $time $timesMessage on this page|j};
     let counterMessage = {j|You've clicked the button: $count|j};
     let d = Moment.(momentWithDate(Js.Date.make()) |> format("HH:mm:ss"));
     <div>
-      <button onClick=(reduce((_) => Click))>
-        (ReasonReact.stringToElement("Click"))
+      <button onClick=(_event => send(Click))>
+        (ReasonReact.string("Click"))
       </button>
-      <p> (ReasonReact.stringToElement(timeMessage)) </p>
-      <p> (ReasonReact.stringToElement(counterMessage)) </p>
-      <p> (ReasonReact.stringToElement(d)) </p>
+      <p> (ReasonReact.string(timeMessage)) </p>
+      <p> (ReasonReact.string(counterMessage)) </p>
+      <p> (ReasonReact.string(d)) </p>
     </div>;
   },
 };
