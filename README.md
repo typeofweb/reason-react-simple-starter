@@ -7,7 +7,7 @@ Welcome Reason React Simple Starter! It's a project created to help you start yo
 [Reason](https://reasonml.github.io) is a typed programming language created by Facebook. Technically speaking it's a front-end for Ocaml. One of the most important features of Reason is powerful and safe type inference. That's what makes ReasonML an interesting alternative to JavaScript, TypeScript or Flow.
 
 ### Why ReasonML?
-You can read more about it here: https://reasonml.github.io/guide/what-and-why
+You can read more about it here: https://reasonml.github.io/docs/en/what-and-why.html
 
 ### Motivation
 This starter project is meant to solve the most common problems when creating a new Reason project:
